@@ -1,0 +1,1494 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/user:
+    get:
+      summary: ''
+      operationId: getApiUser
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/signup:
+    post:
+      summary: ''
+      operationId: postApiSignup
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                firstname:
+                  type: string
+                  description: 'Must be at least 2 characters. Must not be greater than 20 characters.'
+                  example: eoakzrsnhdjuwcshce
+                lastname:
+                  type: string
+                  description: 'Must be at least 2 characters. Must not be greater than 20 characters.'
+                  example: yxczvsioukezhmvrqav
+                telephone:
+                  type: string
+                  description: 'Must be at least 10 characters. Must not be greater than 30 characters.'
+                  example: moqpcxbfhfiocgftuub
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: electa45@example.org
+              required:
+                - firstname
+                - lastname
+                - telephone
+                - email
+      security: []
+  /api/login:
+    post:
+      summary: ''
+      operationId: postApiLogin
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/users:
+    get:
+      summary: ''
+      operationId: getApiUsers
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: true
+                  data: []
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+  /api/cars:
+    get:
+      summary: ''
+      operationId: getApiCars
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: true
+                  data:
+                    -
+                      id: 1
+                      photo1: 'https://cdn.24.co.za/files/Cms/General/d/3089/b1cf3fb0a479438fabf174b092301c29.jpg'
+                      photo2: 'https://img.autotrader.co.za/17873025'
+                      brand: 'Renault Clio'
+                      model: 2019
+                      fuel_type: diesel
+                      price: '30'
+                      gearbox: manuel
+                      available: false
+                    -
+                      id: 2
+                      photo1: 'https://www.razaoautomovel.com/wp-content/uploads/2021/11/Dacia-Duster-4x4-6-scaled_925x520_acf_cropped.jpg'
+                      photo2: 'https://www.topgear.com/sites/default/files/2022/12/Dacia-Duster-on-road-058.jpg'
+                      brand: 'Dacia Duster'
+                      model: 2021
+                      fuel_type: diesel
+                      price: '80'
+                      gearbox: automatic
+                      available: true
+                    -
+                      id: 3
+                      photo1: 'https://location-voiture.ma/uploads/images/cars/slider/572416_ve%CC%81hicule-utilitaire-multispace-berlingo-7-places.jpg'
+                      photo2: 'https://thumbs.img-sprzedajemy.pl/1000x901c/ad/92/ef/citroen-berlingo-xtr-ledy-klimatronik-lift-115-berlingo-560193777.jpg'
+                      brand: 'Citroen Berlingo'
+                      model: 2019
+                      fuel_type: petrol
+                      price: '60'
+                      gearbox: manuel
+                      available: true
+                    -
+                      id: 4
+                      photo1: 'https://www.journalofnomads.com/wp-content/uploads/2019/12/Renting-a-Car-in-Morocco-and-Driving-in-Morocco-e1649421213271.jpg'
+                      photo2: 'https://www.locationvoiture-agadir.fr/timg/phpThumb.php?src=../admin/media/img_vehicule/7c66c06e43509490ea500222f2c7e6e4_001.jpg&w=555&h=331&far=C&bg=FFFFFF&f=png&hash=1787e1341c517d3b249a83bdd1f0eefa'
+                      brand: 'Dacia Logan'
+                      model: 2019
+                      fuel_type: petrol
+                      price: '40'
+                      gearbox: manuel
+                      available: true
+                    -
+                      id: 5
+                      photo1: 'https://sf1.auto-moto.com/wp-content/uploads/sites/9/2016/07/dacia-dokker-1024x768.jpg'
+                      photo2: 'https://www.autoscout24.be/cms-content-assets/1pwJ7zcnchpk3d9ZtAYcDu-4e28845edb0deae0b3d47d4584817b6b-Dacia-Dokker-2013-1280-01-1100.jpg'
+                      brand: 'Dacia Dokker'
+                      model: 2016
+                      fuel_type: petrol
+                      price: '40'
+                      gearbox: manuel
+                      available: false
+                    -
+                      id: 6
+                      photo1: 'https://www.oneclickdrive.com/car-for-rent/slider-desktop/Mercedes-Benz_Mayback-S500_2020_10864_10864_3100348325-5_small.jpg?vr=3'
+                      photo2: 'https://img.gocar.be/v7/_cloud_wordpress_/2019/06/mercedes-maybach_s_650_24.jpg'
+                      brand: 'Mercedes Benz'
+                      model: 2019
+                      fuel_type: petrol
+                      price: '80'
+                      gearbox: automatic
+                      available: true
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        photo1: 'https://cdn.24.co.za/files/Cms/General/d/3089/b1cf3fb0a479438fabf174b092301c29.jpg'
+                        photo2: 'https://img.autotrader.co.za/17873025'
+                        brand: 'Renault Clio'
+                        model: 2019
+                        fuel_type: diesel
+                        price: '30'
+                        gearbox: manuel
+                        available: false
+                      -
+                        id: 2
+                        photo1: 'https://www.razaoautomovel.com/wp-content/uploads/2021/11/Dacia-Duster-4x4-6-scaled_925x520_acf_cropped.jpg'
+                        photo2: 'https://www.topgear.com/sites/default/files/2022/12/Dacia-Duster-on-road-058.jpg'
+                        brand: 'Dacia Duster'
+                        model: 2021
+                        fuel_type: diesel
+                        price: '80'
+                        gearbox: automatic
+                        available: true
+                      -
+                        id: 3
+                        photo1: 'https://location-voiture.ma/uploads/images/cars/slider/572416_ve%CC%81hicule-utilitaire-multispace-berlingo-7-places.jpg'
+                        photo2: 'https://thumbs.img-sprzedajemy.pl/1000x901c/ad/92/ef/citroen-berlingo-xtr-ledy-klimatronik-lift-115-berlingo-560193777.jpg'
+                        brand: 'Citroen Berlingo'
+                        model: 2019
+                        fuel_type: petrol
+                        price: '60'
+                        gearbox: manuel
+                        available: true
+                      -
+                        id: 4
+                        photo1: 'https://www.journalofnomads.com/wp-content/uploads/2019/12/Renting-a-Car-in-Morocco-and-Driving-in-Morocco-e1649421213271.jpg'
+                        photo2: 'https://www.locationvoiture-agadir.fr/timg/phpThumb.php?src=../admin/media/img_vehicule/7c66c06e43509490ea500222f2c7e6e4_001.jpg&w=555&h=331&far=C&bg=FFFFFF&f=png&hash=1787e1341c517d3b249a83bdd1f0eefa'
+                        brand: 'Dacia Logan'
+                        model: 2019
+                        fuel_type: petrol
+                        price: '40'
+                        gearbox: manuel
+                        available: true
+                      -
+                        id: 5
+                        photo1: 'https://sf1.auto-moto.com/wp-content/uploads/sites/9/2016/07/dacia-dokker-1024x768.jpg'
+                        photo2: 'https://www.autoscout24.be/cms-content-assets/1pwJ7zcnchpk3d9ZtAYcDu-4e28845edb0deae0b3d47d4584817b6b-Dacia-Dokker-2013-1280-01-1100.jpg'
+                        brand: 'Dacia Dokker'
+                        model: 2016
+                        fuel_type: petrol
+                        price: '40'
+                        gearbox: manuel
+                        available: false
+                      -
+                        id: 6
+                        photo1: 'https://www.oneclickdrive.com/car-for-rent/slider-desktop/Mercedes-Benz_Mayback-S500_2020_10864_10864_3100348325-5_small.jpg?vr=3'
+                        photo2: 'https://img.gocar.be/v7/_cloud_wordpress_/2019/06/mercedes-maybach_s_650_24.jpg'
+                        brand: 'Mercedes Benz'
+                        model: 2019
+                        fuel_type: petrol
+                        price: '80'
+                        gearbox: automatic
+                        available: true
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        photo1:
+                          type: string
+                          example: 'https://cdn.24.co.za/files/Cms/General/d/3089/b1cf3fb0a479438fabf174b092301c29.jpg'
+                        photo2:
+                          type: string
+                          example: 'https://img.autotrader.co.za/17873025'
+                        brand:
+                          type: string
+                          example: 'Renault Clio'
+                        model:
+                          type: integer
+                          example: 2019
+                        fuel_type:
+                          type: string
+                          example: diesel
+                        price:
+                          type: string
+                          example: '30'
+                        gearbox:
+                          type: string
+                          example: manuel
+                        available:
+                          type: boolean
+                          example: false
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: ''
+      operationId: postApiCars
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  '/api/cars/{id}':
+    get:
+      summary: ''
+      operationId: getApiCarsId
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: true
+                  data:
+                    -
+                      id: 1
+                      photo1: 'https://cdn.24.co.za/files/Cms/General/d/3089/b1cf3fb0a479438fabf174b092301c29.jpg'
+                      photo2: 'https://img.autotrader.co.za/17873025'
+                      brand: 'Renault Clio'
+                      model: 2019
+                      fuel_type: diesel
+                      price: '30'
+                      gearbox: manuel
+                      available: false
+                      created_at: '2024-05-14 13:18:51'
+                      updated_at: '2024-05-14 13:18:51'
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        photo1: 'https://cdn.24.co.za/files/Cms/General/d/3089/b1cf3fb0a479438fabf174b092301c29.jpg'
+                        photo2: 'https://img.autotrader.co.za/17873025'
+                        brand: 'Renault Clio'
+                        model: 2019
+                        fuel_type: diesel
+                        price: '30'
+                        gearbox: manuel
+                        available: false
+                        created_at: '2024-05-14 13:18:51'
+                        updated_at: '2024-05-14 13:18:51'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        photo1:
+                          type: string
+                          example: 'https://cdn.24.co.za/files/Cms/General/d/3089/b1cf3fb0a479438fabf174b092301c29.jpg'
+                        photo2:
+                          type: string
+                          example: 'https://img.autotrader.co.za/17873025'
+                        brand:
+                          type: string
+                          example: 'Renault Clio'
+                        model:
+                          type: integer
+                          example: 2019
+                        fuel_type:
+                          type: string
+                          example: diesel
+                        price:
+                          type: string
+                          example: '30'
+                        gearbox:
+                          type: string
+                          example: manuel
+                        available:
+                          type: boolean
+                          example: false
+                        created_at:
+                          type: string
+                          example: '2024-05-14 13:18:51'
+                        updated_at:
+                          type: string
+                          example: '2024-05-14 13:18:51'
+      tags:
+        - Endpoints
+      security: []
+    delete:
+      summary: ''
+      operationId: deleteApiCarsId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: ''
+      operationId: putApiCarsId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                brand:
+                  type: string
+                  description: ''
+                  example: inventore
+                model:
+                  type: string
+                  description: ''
+                  example: unde
+                gearbox:
+                  type: string
+                  description: ''
+                  example: earum
+                fuel_type:
+                  type: string
+                  description: ''
+                  example: non
+                price:
+                  type: string
+                  description: ''
+                  example: consequatur
+                available:
+                  type: string
+                  description: ''
+                  example: ex
+              required:
+                - brand
+                - model
+                - gearbox
+                - fuel_type
+                - price
+                - available
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the car.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/logout:
+    get:
+      summary: ''
+      operationId: getApiLogout
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Logout successful'
+                properties:
+                  message:
+                    type: string
+                    example: 'Logout successful'
+      tags:
+        - Endpoints
+      security: []
+  /api/rents:
+    get:
+      summary: ''
+      operationId: getApiRents
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: true
+                  data: []
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: ''
+      operationId: postApiRents
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  '/api/users/{user_id}/rents':
+    get:
+      summary: ''
+      operationId: getApiUsersUser_idRents
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Attempt to read property "rents" on null'
+                  exception: ErrorException
+                  file: /home/inyourash/pribadi/car-rental/backend/app/Http/Controllers/RentController.php
+                  line: 38
+                  trace:
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php
+                      line: 266
+                      function: handleError
+                      class: Illuminate\Foundation\Bootstrap\HandleExceptions
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/app/Http/Controllers/RentController.php
+                      line: 38
+                      function: 'Illuminate\Foundation\Bootstrap\{closure}'
+                      class: Illuminate\Foundation\Bootstrap\HandleExceptions
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Routing/Controller.php
+                      line: 54
+                      function: getUserRents
+                      class: App\Http\Controllers\RentController
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php
+                      line: 43
+                      function: callAction
+                      class: Illuminate\Routing\Controller
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Routing/Route.php
+                      line: 260
+                      function: dispatch
+                      class: Illuminate\Routing\ControllerDispatcher
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Routing/Route.php
+                      line: 205
+                      function: runController
+                      class: Illuminate\Routing\Route
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 798
+                      function: run
+                      class: Illuminate\Routing\Route
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 141
+                      function: 'Illuminate\Routing\{closure}'
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php
+                      line: 50
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Routing\Middleware\SubstituteBindings
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                      line: 126
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                      line: 102
+                      function: handleRequest
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                      line: 54
+                      function: handleRequestUsingNamedLimiter
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 116
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 799
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 776
+                      function: runRouteWithinStack
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 740
+                      function: runRoute
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 729
+                      function: dispatchToRoute
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 190
+                      function: dispatch
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 141
+                      function: 'Illuminate\Foundation\Http\{closure}'
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                      line: 21
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
+                      line: 31
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                      line: 21
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
+                      line: 40
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TrimStrings
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
+                      line: 27
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
+                      line: 86
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
+                      line: 62
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Http\Middleware\HandleCors
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
+                      line: 39
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Http\Middleware\TrustProxies
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 116
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 165
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 134
+                      function: sendRequestThroughRouter
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 300
+                      function: handle
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 288
+                      function: callLaravelOrLumenRoute
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 91
+                      function: makeApiCall
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 44
+                      function: makeResponseCall
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 35
+                      function: makeResponseCallIfConditionsPass
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 236
+                      function: __invoke
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 166
+                      function: iterateThroughStrategies
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 95
+                      function: fetchResponses
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 125
+                      function: processRoute
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 72
+                      function: extractEndpointsInfoFromLaravelApp
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 50
+                      function: extractEndpointsInfoAndWriteToDisk
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
+                      line: 53
+                      function: get
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 36
+                      function: handle
+                      class: Knuckles\Scribe\Commands\GenerateDocumentation
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Container/Util.php
+                      line: 41
+                      function: 'Illuminate\Container\{closure}'
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 93
+                      function: unwrapIfClosure
+                      class: Illuminate\Container\Util
+                      type: '::'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 37
+                      function: callBoundMethod
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Container/Container.php
+                      line: 661
+                      function: call
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                      line: 183
+                      function: call
+                      class: Illuminate\Container\Container
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/symfony/console/Command/Command.php
+                      line: 312
+                      function: execute
+                      class: Illuminate\Console\Command
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                      line: 153
+                      function: run
+                      class: Symfony\Component\Console\Command\Command
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/symfony/console/Application.php
+                      line: 1022
+                      function: run
+                      class: Illuminate\Console\Command
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/symfony/console/Application.php
+                      line: 314
+                      function: doRunCommand
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/symfony/console/Application.php
+                      line: 168
+                      function: doRun
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Console/Application.php
+                      line: 102
+                      function: run
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
+                      line: 155
+                      function: run
+                      class: Illuminate\Console\Application
+                      type: '->'
+                    -
+                      file: /home/inyourash/pribadi/car-rental/backend/artisan
+                      line: 37
+                      function: handle
+                      class: Illuminate\Foundation\Console\Kernel
+                      type: '->'
+                properties:
+                  message:
+                    type: string
+                    example: 'Attempt to read property "rents" on null'
+                  exception:
+                    type: string
+                    example: ErrorException
+                  file:
+                    type: string
+                    example: /home/inyourash/pribadi/car-rental/backend/app/Http/Controllers/RentController.php
+                  line:
+                    type: integer
+                    example: 38
+                  trace:
+                    type: array
+                    example:
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php
+                        line: 266
+                        function: handleError
+                        class: Illuminate\Foundation\Bootstrap\HandleExceptions
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/app/Http/Controllers/RentController.php
+                        line: 38
+                        function: 'Illuminate\Foundation\Bootstrap\{closure}'
+                        class: Illuminate\Foundation\Bootstrap\HandleExceptions
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Routing/Controller.php
+                        line: 54
+                        function: getUserRents
+                        class: App\Http\Controllers\RentController
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php
+                        line: 43
+                        function: callAction
+                        class: Illuminate\Routing\Controller
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Routing/Route.php
+                        line: 260
+                        function: dispatch
+                        class: Illuminate\Routing\ControllerDispatcher
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Routing/Route.php
+                        line: 205
+                        function: runController
+                        class: Illuminate\Routing\Route
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 798
+                        function: run
+                        class: Illuminate\Routing\Route
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 141
+                        function: 'Illuminate\Routing\{closure}'
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php
+                        line: 50
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Routing\Middleware\SubstituteBindings
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                        line: 126
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                        line: 102
+                        function: handleRequest
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                        line: 54
+                        function: handleRequestUsingNamedLimiter
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 116
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 799
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 776
+                        function: runRouteWithinStack
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 740
+                        function: runRoute
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 729
+                        function: dispatchToRoute
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 190
+                        function: dispatch
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 141
+                        function: 'Illuminate\Foundation\Http\{closure}'
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                        line: 21
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
+                        line: 31
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                        line: 21
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
+                        line: 40
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TrimStrings
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
+                        line: 27
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
+                        line: 86
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
+                        line: 62
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Http\Middleware\HandleCors
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
+                        line: 39
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Http\Middleware\TrustProxies
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 116
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 165
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 134
+                        function: sendRequestThroughRouter
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 300
+                        function: handle
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 288
+                        function: callLaravelOrLumenRoute
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 91
+                        function: makeApiCall
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 44
+                        function: makeResponseCall
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 35
+                        function: makeResponseCallIfConditionsPass
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 236
+                        function: __invoke
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 166
+                        function: iterateThroughStrategies
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 95
+                        function: fetchResponses
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 125
+                        function: processRoute
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 72
+                        function: extractEndpointsInfoFromLaravelApp
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 50
+                        function: extractEndpointsInfoAndWriteToDisk
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
+                        line: 53
+                        function: get
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 36
+                        function: handle
+                        class: Knuckles\Scribe\Commands\GenerateDocumentation
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Container/Util.php
+                        line: 41
+                        function: 'Illuminate\Container\{closure}'
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 93
+                        function: unwrapIfClosure
+                        class: Illuminate\Container\Util
+                        type: '::'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 37
+                        function: callBoundMethod
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Container/Container.php
+                        line: 661
+                        function: call
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                        line: 183
+                        function: call
+                        class: Illuminate\Container\Container
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/symfony/console/Command/Command.php
+                        line: 312
+                        function: execute
+                        class: Illuminate\Console\Command
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                        line: 153
+                        function: run
+                        class: Symfony\Component\Console\Command\Command
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/symfony/console/Application.php
+                        line: 1022
+                        function: run
+                        class: Illuminate\Console\Command
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/symfony/console/Application.php
+                        line: 314
+                        function: doRunCommand
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/symfony/console/Application.php
+                        line: 168
+                        function: doRun
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Console/Application.php
+                        line: 102
+                        function: run
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
+                        line: 155
+                        function: run
+                        class: Illuminate\Console\Application
+                        type: '->'
+                      -
+                        file: /home/inyourash/pribadi/car-rental/backend/artisan
+                        line: 37
+                        function: handle
+                        class: Illuminate\Foundation\Console\Kernel
+                        type: '->'
+                    items:
+                      type: object
+                      properties:
+                        file:
+                          type: string
+                          example: /home/inyourash/pribadi/car-rental/backend/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php
+                        line:
+                          type: integer
+                          example: 266
+                        function:
+                          type: string
+                          example: handleError
+                        class:
+                          type: string
+                          example: Illuminate\Foundation\Bootstrap\HandleExceptions
+                        type:
+                          type: string
+                          example: '->'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: user_id
+        description: 'The ID of the user.'
+        example: 14
+        required: true
+        schema:
+          type: integer
+  '/api/user/{user_id}':
+    put:
+      summary: ''
+      operationId: putApiUserUser_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                firstname:
+                  type: string
+                  description: 'Must be at least 2 characters. Must not be greater than 20 characters.'
+                  example: afhawjqbueaxbjdfu
+                lastname:
+                  type: string
+                  description: 'Must be at least 2 characters. Must not be greater than 20 characters.'
+                  example: hcrpgkupw
+                telephone:
+                  type: string
+                  description: 'Must be at least 10 characters. Must not be greater than 30 characters.'
+                  example: geomprs
+              required:
+                - firstname
+                - lastname
+                - telephone
+      security: []
+    parameters:
+      -
+        in: path
+        name: user_id
+        description: 'The ID of the user.'
+        example: 12
+        required: true
+        schema:
+          type: integer
+  '/api/rents/{id}':
+    delete:
+      summary: ''
+      operationId: deleteApiRentsId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: ''
+      operationId: putApiRentsId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                rental_date:
+                  type: string
+                  description: ''
+                  example: corrupti
+                return_date:
+                  type: string
+                  description: ''
+                  example: similique
+                price:
+                  type: string
+                  description: ''
+                  example: quo
+                user_id:
+                  type: string
+                  description: ''
+                  example: at
+                car_id:
+                  type: string
+                  description: ''
+                  example: quos
+              required:
+                - rental_date
+                - return_date
+                - price
+                - user_id
+                - car_id
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the rent.'
+        example: 18
+        required: true
+        schema:
+          type: integer
+  '/api/users/{id}':
+    delete:
+      summary: ''
+      operationId: deleteApiUsersId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: ''
+      operationId: putApiUsersId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                firstname:
+                  type: string
+                  description: ''
+                  example: ut
+                lastname:
+                  type: string
+                  description: ''
+                  example: error
+                telephone:
+                  type: string
+                  description: ''
+                  example: quis
+                email:
+                  type: string
+                  description: ''
+                  example: ab
+              required:
+                - firstname
+                - lastname
+                - telephone
+                - email
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the user.'
+        example: 18
+        required: true
+        schema:
+          type: integer
+tags:
+  -
+    name: Endpoints
+    description: ''
