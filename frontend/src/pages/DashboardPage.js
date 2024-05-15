@@ -168,7 +168,7 @@ function Dashboard() {
                                 if (column == "available")
                                   return (
                                     <Td key={item.id}>
-                                      {item[column] == 0 ? "yes" : "no"}
+                                      {item[column] == false ? "yes" : "no"}
                                     </Td>
                                   );
                                 else
@@ -199,7 +199,7 @@ function Dashboard() {
                                 if (column == "available")
                                   return (
                                     <Td key={item.id}>
-                                      {item[column] == 0 ? "yes" : "no"}
+                                      {item[column] == false ? "yes" : "no"}
                                     </Td>
                                   );
                                 else

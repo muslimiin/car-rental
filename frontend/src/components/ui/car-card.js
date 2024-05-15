@@ -88,9 +88,9 @@ const CarCard = ({ props }) => {
                 {t("carCard.available")}
               </Heading>
               <Text fontWeight="500" color="gray.600">
-                {props.available === 1
+                {props.available === true
                   ? t("carCard.yes")
-                  : props.available === 0
+                  : props.available === false
                   ? t("carCard.no")
                   : props.available}
               </Text>

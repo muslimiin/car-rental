@@ -91,8 +91,10 @@ function Rent() {
     const rentDuration = return_date - rental_date;
 
     if (rental_date < now || return_date < now) {
+      showToast(toast, "Please select a valid rental and return dates.", "error", "Error");
       console.log("Please select a valid rental and return dates.");
     } else if (rentDuration <= 0) {
+      showToast(toast, "You can rent for 1 day at least.", "error", "Error");
       console.log("You can rent for 1 day at least.");
     } else {
       const price = (rentDuration / (1000 * 60 * 60 * 24)) * car.price;
@@ -192,9 +194,9 @@ function Rent() {
                     {t("carCard.available")}
                   </Heading>
                   <Text fontWeight="600" color="gray.600">
-                    {car.available === 1
+                    {car.available === true
                       ? t("carCard.yes")
-                      : car.available === 0
+                      : car.available === false
                       ? t("carCard.no")
                       : car.available}
                   </Text>
