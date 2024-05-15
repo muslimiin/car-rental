@@ -90,7 +90,7 @@ const AvatarMenu = () => {
                 onClick={() => changeLanguage("fr")}
                 style={{ display: currentLanguage === "fr" ? "none" : "block" }}
               >
-                {t("menuList.french")}
+                {t("menuList.indonesia")}
               </MenuItem>
               <MenuItem onClick={() => navigate("/profile")}>
                 {t("menuList.profile")}
