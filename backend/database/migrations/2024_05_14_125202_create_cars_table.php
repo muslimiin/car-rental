@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text('photo2');
             $table->string('brand', 30);
             $table->smallInteger('model');
+            $table->string('number_plate', 15);
             $table->string('fuel_type', 15);
             $table->double('price');
             $table->string('gearbox', 15);
