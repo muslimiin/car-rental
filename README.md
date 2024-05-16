@@ -4,7 +4,10 @@ Follow these steps to set up and run LOCAVO on your local machine:
 ## 1. Import the Database
 1- In PHPMyAdmin or console, create a new database.
 
-2- Running migration in Backend into the newly created database.
+2- Running migration and seeders in Backend into the newly created database.
+```bash
+php artisan migrate --seed
+```
 
 ## 2. Start Frontend
 1- Open a terminal.
