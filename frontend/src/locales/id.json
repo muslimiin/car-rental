@@ -50,7 +50,7 @@
       "title": "Pemilik Usaha Kecil"
     }
   ],
-  "footer.about": "LOCAVO",
+  "footer.about": "FORTIS",
   "footer.aboutDescription": "Pilihan kendaraan yang luas, harga kompetitif untuk membuat pengalaman Anda menyenangkan.",
   "footer.company": "Perusahaan",
   "footer.blog": "Blog",
@@ -61,7 +61,7 @@
   "footer.privacyPolicy": "Kebijakan Privasi",
   "footer.termsOfService": "Syarat Penggunaan",
   "footer.installApp": "Instal Aplikasi",
-  "footer.copyright": "© Hak Cipta. Semua hak dilindungi.",
+  "footer.copyright": "© Hak Cipta 2024. Semua hak dilindungi.",
   "navbarLoginButtons.login": "Masuk",
   "navbarLoginButtons.signup": "Daftar Gratis",
   "linkItems.home": "Beranda",
@@ -103,6 +103,8 @@
     "modifyProfile": "Ubah profil Anda",
     "firstname": "Nama Depan",
     "lastname": "Nama Belakang",
+    "address": "Alamat",
+    "identityNumber": "Nomor SIM",
     "phoneNumber": "Nomor Telepon",
     "cancel": "Batal",
     "save": "Simpan"
@@ -115,7 +117,7 @@
     "password": "Kata Sandi",
     "createAccount": "Buat Akun",
     "signIn": "Masuk",
-    "welcome":"Selamat datang di Locavo",
+    "welcome":"Selamat datang di Fortis",
     "loginMessage": "Tidak punya akun?",
     "signupMessage": "Sudah punya akun?"
   },

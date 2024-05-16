@@ -87,8 +87,8 @@ const AvatarMenu = () => {
                 {t("menuList.english")}
               </MenuItem>
               <MenuItem
-                onClick={() => changeLanguage("fr")}
-                style={{ display: currentLanguage === "fr" ? "none" : "block" }}
+                onClick={() => changeLanguage("id")}
+                style={{ display: currentLanguage === "id" ? "none" : "block" }}
               >
                 {t("menuList.indonesia")}
               </MenuItem>

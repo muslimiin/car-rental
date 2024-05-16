@@ -8,7 +8,7 @@ const NavbarLinks = () => {
   return (
     <div className="collapse navbar-collapse mt-lg-0 mt-4" id="navbarLinks">
       <Link className="navbar-brand" to="#">
-        Locavo
+        FORTIS
       </Link>
       <ul className="navbar-nav">
         <li className="nav-item mx-2">

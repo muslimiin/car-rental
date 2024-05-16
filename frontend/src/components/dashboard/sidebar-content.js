@@ -41,7 +41,7 @@ const SidebarContent = ({ handleData, ...props }) => {
       >
         <Flex px="4" py="5" align="center">
           <Text fontSize="2xl" ml="2" color="white" fontWeight="semibold">
-            LOCAVO
+            FORTIS
           </Text>
         </Flex>
         <Flex
@@ -88,7 +88,7 @@ const SidebarContent = ({ handleData, ...props }) => {
           >
             <Flex px="4" py="5" align="center">
               <Text fontSize="2xl" ml="2" color="white" fontWeight="semibold">
-                LOCAVO
+              FORTIS
               </Text>
             </Flex>
             <Flex

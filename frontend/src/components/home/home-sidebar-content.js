@@ -79,12 +79,12 @@ const HomeSidebarContent = () => {
     { name: bookCarsTranslation, icon: BiCar, link: "/cars" },
     ...(email === "admin@gmail.com"
       ? [
-          {
-            name: dashboardTranslation,
-            icon: AiOutlineDashboard,
-            link: "/dashboard",
-          },
-        ]
+        {
+          name: dashboardTranslation,
+          icon: AiOutlineDashboard,
+          link: "/dashboard",
+        },
+      ]
       : []),
     { name: aboutUsTranslation, icon: AiOutlineInfoCircle, link: "/#" },
     { name: termsOfServiceTranslation, icon: RiFileTextLine, link: "/#" },
@@ -110,7 +110,7 @@ const HomeSidebarContent = () => {
                 justifyContent="space-between"
               >
                 <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
-                  LOCAVO
+                  FORTIS
                 </Text>
                 <CloseButton
                   display={{ base: "flex", md: "none" }}

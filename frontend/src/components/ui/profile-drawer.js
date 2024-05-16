@@ -109,6 +109,20 @@ function ProfileDrawer() {
                 />
               </Box>
 
+
+              <Box>
+                <FormLabel htmlFor="address">
+                  {t("profile.address")}
+                </FormLabel>
+                <Input
+                  ref={firstField}
+                  id="address"
+                  name="address"
+                  value={formData.address}
+                  onChange={handleChange}
+                />
+              </Box>
+
               <Box>
                 <FormLabel htmlFor="telephone">
                   {t("profile.phoneNumber")}
@@ -117,6 +131,20 @@ function ProfileDrawer() {
                   id="telephone"
                   name="telephone"
                   value={formData.telephone}
+                  onChange={handleChange}
+                />
+              </Box>
+
+
+              <Box>
+                <FormLabel htmlFor="identity_number">
+                  {t("profile.identityNumber")}
+                </FormLabel>
+                <Input
+                  ref={firstField}
+                  id="identity_number"
+                  name="identity_number"
+                  value={formData.identity_number}
                   onChange={handleChange}
                 />
               </Box>

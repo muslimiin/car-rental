@@ -50,7 +50,7 @@
       "title": "Small Business Owner"
     }
   ],
-  "footer.about": "About LOCAVO",
+  "footer.about": "About FORTIS",
   "footer.aboutDescription": "A wide selection of vehicles, competitive prices to make your experience enjoyable.",
   "footer.company": "Company",
   "footer.blog": "Blog",
@@ -61,7 +61,7 @@
   "footer.privacyPolicy": "Privacy Policy",
   "footer.termsOfService": "Terms of Service",
   "footer.installApp": "Install App",
-  "footer.copyright": "© Copyright. All rights reserved.",
+  "footer.copyright": "© Copyright 2024. All rights reserved.",
   "navbarLoginButtons.login": "Login",
   "navbarLoginButtons.signup": "Sign up for free",
   "linkItems.home": "Home",
@@ -103,6 +103,8 @@
     "modifyProfile": "Modify your profile",
     "firstname": "Firstname",
     "lastname": "Lastname",
+    "address": "Address",
+    "identityNumber": "Identity Number",
     "phoneNumber": "Phone number",
     "cancel": "Cancel",
     "save": "Save"
@@ -115,7 +117,7 @@
     "password": "Password",
     "createAccount": "Create account",
     "signIn": "Sign In",
-    "welcome":"Welcome to Locavo",
+    "welcome":"Welcome to Fortis",
     "loginMessage": "Don't have an account?",
     "signupMessage": "Already a user?"
   },
